@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DisplayDoorCodeActivity"
+            android:label="@string/title_activity_display_door_code"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.newbies.doorcodes.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

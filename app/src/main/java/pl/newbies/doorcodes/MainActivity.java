@@ -1,5 +1,6 @@
 package pl.newbies.doorcodes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,10 +9,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity
 {
+    public static final String EXTRA_DOOR_ID = "pl.newbies.doorcodes.DOOR_ID";
+
     private ListView listView;
     private ArrayAdapter<String> adapter;
 
@@ -21,19 +22,23 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listView = (ListView)findViewById(R.id.list_view);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         listView.setAdapter(adapter);
 
-        String[] content = {"foo", "bar", "hey"};
+        String[] content = {"ul. Wałbrzyska 13/4", "ul. Długa 5/1", "ul. Krótka 6/3"};
+
         adapter.addAll(content);
-        listView.setOnItemClickListener(mMessageClickedHandler);
+
+        listView.setOnItemClickListener(new OnItemClickListener(){
+            public void onItemClick(AdapterView parent, View view, int position, long id){
+                startDoorCodeActivity(position);
+            }});
     }
 
-    private OnItemClickListener mMessageClickedHandler = new OnItemClickListener()
+    public void startDoorCodeActivity(int position)
     {
-        public void onItemClick(AdapterView parent, View view, int position, long id)
-        {
-            adapter.add("Hello button #"+position+": "+adapter.getItem(position));
-        }
-    };
+        Intent intent = new Intent(this, DisplayDoorCodeActivity.class);
+        intent.putExtra(EXTRA_DOOR_ID, position);
+        startActivity(intent);
+    }
 }
