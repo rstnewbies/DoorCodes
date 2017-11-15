@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <gate>
+        <name>Agatowa 6</name>
+        <code>6123</code>
+    </gate>
+    <gate>
+        <name>Agatowa 8</name>
+        <code>8123</code>
+    </gate>
+    <gate>
+        <name>Armii Krajowej 36</name>
+        <code>3612</code>
+    </gate>
+    <gate>
+        <name>Armii Krajowej 40</name>
+        <code>4012</code>
+    </gate>
+    <gate>
+        <name>Bochaterow Getta 4</name>
+        <code>4123</code>
+    </gate>
+    <gate>
+        <name>Bochaterow Getta 15</name>
+        <code>1512</code>
+    </gate>
+    <gate>
+        <name>Dabrowskiego 11</name>
+        <code>1112</code>
+    </gate>
+    <gate>
+        <name>Dabrowskiego 24</name>
+        <code>2412</code>
+    </gate>
+    <gate>
+        <name>Dabrowskiego 29</name>
+        <code>2912</code>
+    </gate>
+    <gate>
+        <name>Goczalkow ul. Strzegomska 41A</name>
+        <code>4112</code>
+    </gate>
+    <gate>
+        <name>Goczalkow ul. Strzegomska 49A</name>
+        <code>4912</code>
+    </gate>
+    <gate>
+        <name>Goczalkow ul. Strzegomska 49B</name>
+        <code>4912</code>
+    </gate>
+    <gate>
+        <name>Jaroszow 56</name>
+        <code>5612</code>
+    </gate>
+    <gate>
+        <name>Jaroszow 86</name>
+        <code>8612</code>
+    </gate>
+    <gate>
+        <name>Jaroszow 95</name>
+        <code>9512</code>
+    </gate>
+</resources>
