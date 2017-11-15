@@ -3,4 +3,9 @@
     <string name="title_activity_display_door_code">Display Door Code</string>
     <string name="door_code_error">Error</string>
     <string name="door_code_msg">Code for door #%d</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
