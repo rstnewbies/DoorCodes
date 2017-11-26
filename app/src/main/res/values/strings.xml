@@ -7,5 +7,11 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="nav_add">Add door code</string>
+    <string name="nav_edit">Edit door code</string>
+    <string name="nav_delete">Delete door code</string>
+    <string name="nav_other">Settings</string>
+    <string name="nav_settings">Settings</string>
+
     <string name="action_settings">Settings</string>
 </resources>
