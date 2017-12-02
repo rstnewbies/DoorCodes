@@ -37,7 +37,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        List<String> content = Arrays.asList("ul. Wałbrzyska 13/4", "ul. Długa 5/1", "ul. Krótka 6/3");
+        List<String> content = Arrays.asList("ul. Wałbrzyska 13", "ul. Długa 5", "ul. Krótka 6",
+                                            "ul. Zamenhofa 44", "ul. Orla 29", "ul. Wrocławska 66",
+                                            "ul. Westerplatte 12", "ul. Boduena 92", "pl. Grunwaldzki 63");
 
         adapter = new DoorCodeAdapter(this, content);
 
