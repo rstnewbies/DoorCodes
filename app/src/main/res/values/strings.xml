@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Door Codes</string>
     <string name="title_activity_display_door_code">Display Door Code</string>
+    <string name="title_activity_add_new_code">Add New Code</string>
     <string name="door_code_error">Error</string>
     <string name="door_code_msg">Code for door #%d</string>
 

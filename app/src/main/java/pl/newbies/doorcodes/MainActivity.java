@@ -1,5 +1,6 @@
 package pl.newbies.doorcodes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -124,8 +125,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_add) {
-            //TODO switch activities
+            Intent intent = new Intent(this, AddNewCodeActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_edit) {
+            //TODO switch activities
 
         } else if (id == R.id.nav_delete) {
 

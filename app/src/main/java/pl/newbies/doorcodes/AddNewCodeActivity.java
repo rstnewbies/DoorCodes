@@ -4,12 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
-public class AddedNewCodesActivity extends AppCompatActivity {
+public class AddNewCodeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.added_new_codes);
+        setContentView(R.layout.activity_add_new_code);
     }
 
     public void onButtonClick() {
@@ -18,9 +18,9 @@ public class AddedNewCodesActivity extends AppCompatActivity {
 
     public void onSaveButtonClick() {
         EditText streetEditText = (EditText) findViewById(R.id.streetEditText);
-        String street =streetEditText.getText().toString();
+        String street = streetEditText.getText().toString();
         EditText codeEditText = (EditText) findViewById(R.id.codeEditText);
-        String code =codeEditText.getText().toString();
+        String code = codeEditText.getText().toString();
         // TODO zapisać zmienne street i code do bazy danych
         finish();
     }

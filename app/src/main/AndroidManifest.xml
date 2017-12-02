@@ -26,7 +26,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.newbies.doorcodes.MainActivity" />
         </activity>
-        <activity android:name=".AddedNewCodesActivity"></activity>
+        <activity
+            android:name=".AddNewCodeActivity"
+            android:label="@string/title_activity_add_new_code"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.newbies.doorcodes.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
