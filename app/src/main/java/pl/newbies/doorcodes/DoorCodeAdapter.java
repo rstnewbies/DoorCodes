@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -38,8 +39,17 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DisplayDoorCodeActivity.class);
-                intent.putExtra(MainActivity.EXTRA_DOOR_ID, position);
+                intent.putExtra(MainActivity.EXTRA_DOOR_ID, holder.getAdapterPosition());
                 context.startActivity(intent);
+            }
+        });
+        holder.editButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+//                TODO add activity edit code
+//                Intent intent = new Intent(context, DisplayDoorCodeActivity.class);
+//                intent.putExtra(MainActivity.EXTRA_DOOR_ID, holder.getAdapterPosition());
+//                context.startActivity(intent);
             }
         });
     }
@@ -65,6 +75,7 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         public TextView txtContent;
+        public ImageView editButton;
         public View layout;
 
         public ViewHolder(View view)
@@ -72,6 +83,7 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
             super(view);
             layout = view;
             txtContent = view.findViewById(R.id.contentTextView);
+            editButton = view.findViewById(R.id.editImageView);
         }
     }
 
