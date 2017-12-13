@@ -12,43 +12,35 @@ import org.greenrobot.greendao.annotation.Generated;
 public class Gate {
 
     @Id
-    private long id;
+    private Long id;
 
 
     public String name;
     public String code;
-
-    @Generated(hash = 836570800)
-    public Gate(long id, String name, String code) {
+    @Generated(hash = 2120593570)
+    public Gate(Long id, String name, String code) {
         this.id = id;
         this.name = name;
         this.code = code;
     }
-
     @Generated(hash = 833346218)
     public Gate() {
     }
-
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
-
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
-
     public String getName() {
         return this.name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getCode() {
         return this.code;
     }
-
     public void setCode(String code) {
         this.code = code;
     }
