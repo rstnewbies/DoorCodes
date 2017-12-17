@@ -13,7 +13,7 @@
         android:id="@+id/streetTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj nową ulice"
+        android:text="@string/add_code_street"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/streetEditText"
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nazwa ulicy"
+        android:hint="@string/add_code_street_hint"
         android:inputType="textPersonName"
         android:textSize="36sp"
         app:layout_constraintHorizontal_bias="0.205"
@@ -48,7 +48,7 @@
         android:id="@+id/codeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj nowy kod"
+        android:text="@string/add_code_code"
         android:textSize="36sp"
         app:layout_constraintLeft_toLeftOf="@+id/streetEditText"
         app:layout_constraintTop_toBottomOf="@+id/streetTextView"
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Kod do bramy"
+        android:hint="@string/add_code_code_hint"
         android:inputType="textPersonName"
         android:textSize="36sp"
         app:layout_constraintLeft_toLeftOf="@+id/codeTextView"
@@ -70,12 +70,10 @@
 
     <Button
         android:id="@+id/saveButton"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/alert_dark_frame"
         android:onClick="onSaveButtonClick"
-        android:text="zapisz"
+        android:text="@string/button_save"
         app:layout_constraintBottom_toBottomOf="@+id/backButton"
         app:layout_constraintLeft_toLeftOf="@+id/codeEditText"
         app:layout_constraintTop_toBottomOf="@+id/codeEditText"
@@ -86,15 +84,14 @@
 
     <Button
         android:id="@+id/backButton"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
-        android:background="@android:drawable/alert_dark_frame"
         android:onClick="onButtonClick"
-        android:text="wróć"
+        android:text="@string/button_back"
         app:layout_constraintLeft_toLeftOf="@+id/codeEditText"
         app:layout_constraintTop_toBottomOf="@+id/codeEditText"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
+
 </LinearLayout>
