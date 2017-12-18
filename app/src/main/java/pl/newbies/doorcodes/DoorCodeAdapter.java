@@ -66,10 +66,7 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
         content.remove(position);
         notifyItemRemoved(position);
     }
-    public void addAllData(List<String> content) {
-        this.content.addAll(content);
-        notifyDataSetChanged();
-    }
+
 
     public void addData(String content) {
         this.content.add(content);

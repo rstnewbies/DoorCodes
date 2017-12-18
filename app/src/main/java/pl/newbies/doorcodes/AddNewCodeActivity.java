@@ -1,5 +1,6 @@
 package pl.newbies.doorcodes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +31,9 @@ public class AddNewCodeActivity extends AppCompatActivity {
         gate.name=streetact;
         gate.code=codeact;
         gateDao.save(gate);
-        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
     }
 
 
