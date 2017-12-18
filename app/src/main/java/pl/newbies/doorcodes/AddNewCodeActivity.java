@@ -24,10 +24,12 @@ public class AddNewCodeActivity extends AppCompatActivity {
         EditText codeEditText = (EditText) findViewById(R.id.codeEditText);
         String codeact = codeEditText.getText().toString();
 
+        DaoSession daoSession = (App.getInstance()).getDaoSession();
+        GateDao gateDao = daoSession.getGateDao();
         Gate gate = new Gate();
-        gate.setName(streetact);
-        gate.setCode(codeact);
-        gate.create();
+        gate.name=streetact;
+        gate.code=codeact;
+        gateDao.save(gate);
         finish();
     }
 

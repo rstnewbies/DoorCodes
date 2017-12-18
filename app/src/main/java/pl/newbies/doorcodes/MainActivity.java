@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter adapter;
+    private DoorCodeAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,14 +37,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        List<String> content = Arrays.asList("ul. Wałbrzyska 13", "ul. Długa 5", "ul. Krótka 6",
-                                            "ul. Zamenhofa 44", "ul. Orla 29", "ul. Wrocławska 66",
-                                            "ul. Westerplatte 12", "ul. Boduena 92", "pl. Grunwaldzki 63");
 
-        adapter = new DoorCodeAdapter(this, content);
+
+        adapter = new DoorCodeAdapter(this);
 
         recyclerView.setAdapter(adapter);
-
+        reloadNRead();
         initNavigationDrawer();
     }
 
@@ -123,5 +122,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    void reloadNRead() {
+        adapter.clear();
+        List<Gate> gates = Gate.getAllDatas();
+        for (int i = 0; i < gates.size(); i++) {
+            Log.d(this.getClass().getName(), "Ulica: " + gates.get(i).name);
+            adapter.addData("Ulica : " + gates.get(i).name);
+        }
     }
 }

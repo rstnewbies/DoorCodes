@@ -9,18 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHolder>
 {
     private Context context;
-    private List<String> content;
+    private List<String> content= new ArrayList<>();
 
-    public DoorCodeAdapter(Context context, List<String> content)
+   public DoorCodeAdapter(Context context)
     {
         this.context = context;
-        this.content = content;
-    }
+     //   this.content = content;
+   }
 
     @Override
     public DoorCodeAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
@@ -33,8 +34,8 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position)
     {
-        final String name = content.get(position);
-        holder.txtContent.setText(name);
+
+        holder.txtContent.setText(content.get(position));
         holder.txtContent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +65,18 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
     {
         content.remove(position);
         notifyItemRemoved(position);
+    }
+    public void addAllData(List<String> content) {
+        this.content.addAll(content);
+        notifyDataSetChanged();
+    }
+
+    public void addData(String content) {
+        this.content.add(content);
+        notifyDataSetChanged();
+    }
+    public void clear() {
+        this.content.clear();
     }
 
     @Override

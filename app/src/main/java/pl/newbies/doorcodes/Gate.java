@@ -4,6 +4,8 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
+import java.util.List;
+
 /**
  * Created by adidaser1 on 11.12.2017.
  */
@@ -12,7 +14,7 @@ import org.greenrobot.greendao.annotation.Generated;
 public class Gate {
 
     @Id
-    private Long id;
+    public Long id;
 
 
     public String name;
@@ -47,13 +49,11 @@ public class Gate {
 
 //TODO stworzyc creata
 
-    public void create() {
+    public static List<Gate> getAllDatas() {
         DaoSession daoSession = (App.getInstance()).getDaoSession();
         GateDao gateDao = daoSession.getGateDao();
-        Gate gate = new Gate();
-        gate.name = this.name;
-        gate.code = this.code;
-        gateDao.save(gate);
 
+        List<Gate> gates = gateDao.loadAll();
+        return gates;
     }
 }
