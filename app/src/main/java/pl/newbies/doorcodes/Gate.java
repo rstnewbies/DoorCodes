@@ -4,6 +4,7 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -52,8 +53,8 @@ public class Gate {
     public static List<Gate> getAllDatas() {
         DaoSession daoSession = (App.getInstance()).getDaoSession();
         GateDao gateDao = daoSession.getGateDao();
+        List<Gate> gates = gateDao.queryBuilder().orderAsc(GateDao.Properties.Name).list();
 
-        List<Gate> gates = gateDao.loadAll();
         return gates;
     }
 }
