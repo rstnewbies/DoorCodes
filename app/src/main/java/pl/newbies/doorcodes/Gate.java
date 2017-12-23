@@ -1,11 +1,10 @@
 package pl.newbies.doorcodes;
 
 import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
 
 import java.io.Serializable;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -51,11 +50,10 @@ static final long serialVersionUID = 1L;
 
 //TODO stworzyc creata
 
-    public static List<Gate> getAllDatas() {
+    public static List<Gate> getAllData() {
         DaoSession daoSession = (App.getInstance()).getDaoSession();
         GateDao gateDao = daoSession.getGateDao();
-        List<Gate> gates = gateDao.queryBuilder().orderAsc(GateDao.Properties.Name).list();
 
-        return gates;
+        return gateDao.queryBuilder().orderAsc(GateDao.Properties.Name).list();
     }
 }

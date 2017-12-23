@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     void reloadNRead() {
         adapter.clear();
-        List<Gate> gates = Gate.getAllDatas();
+        List<Gate> gates = Gate.getAllData();
 
         for (int i = 0; i < gates.size(); i++) {
 

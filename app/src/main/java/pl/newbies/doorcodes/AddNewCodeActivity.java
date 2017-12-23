@@ -20,6 +20,7 @@ public class AddNewCodeActivity extends AppCompatActivity {
     }
 
     public void onSaveButtonClick(View view) {
+
         EditText streetEditText = (EditText) findViewById(R.id.streetEditText);
         String streetact = streetEditText.getText().toString();
         EditText codeEditText = (EditText) findViewById(R.id.codeEditText);
