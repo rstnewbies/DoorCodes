@@ -2,7 +2,6 @@ package pl.newbies.doorcodes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -17,13 +16,13 @@ public class DisplayDoorCodeActivity extends AppCompatActivity
         setContentView(R.layout.activity_display_door_code);
 
         Intent intent = getIntent();
-        Gate gate =(Gate) intent.getSerializableExtra(EXTRA_GATE);
+        Gate gate = (Gate) intent.getSerializableExtra(EXTRA_GATE);
 
         TextView textView = (TextView)findViewById(R.id.textView);
-        if(gate==null)
-            textView.setText("error");
+        if(gate == null)
+            textView.setText(R.string.door_code_error);
         else
-            textView.setText(String.format(getResources().getString(R.string.door_code_msg )+" "+ gate.getCode()));
+            textView.setText(String.format(getResources().getString(R.string.door_code_msg), gate.getCode()));
     }
 
 }

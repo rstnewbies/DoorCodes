@@ -12,7 +12,7 @@
     <string name="button_save">Zapisz</string>
     <string name="button_back">Wróć</string>
 
-    <string name="door_code_msg">Code for gate: </string>
+    <string name="door_code_msg">Code for gate: %s</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

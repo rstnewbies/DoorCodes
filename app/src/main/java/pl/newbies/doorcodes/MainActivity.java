@@ -15,12 +15,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    public static final String EXTRA_DOOR_ID = "pl.newbies.doorcodes.DOOR_ID";
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;

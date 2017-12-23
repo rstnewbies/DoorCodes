@@ -28,8 +28,8 @@ public class AddNewCodeActivity extends AppCompatActivity {
         DaoSession daoSession = (App.getInstance()).getDaoSession();
         GateDao gateDao = daoSession.getGateDao();
         Gate gate = new Gate();
-        gate.name=streetact;
-        gate.code=codeact;
+        gate.name = streetact;
+        gate.code = codeact;
         gateDao.save(gate);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

@@ -15,12 +15,11 @@ import java.util.List;
 public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHolder>
 {
     private Context context;
-    private List<Gate> content= new ArrayList<>();
+    private List<Gate> content = new ArrayList<>();
 
    public DoorCodeAdapter(Context context)
     {
         this.context = context;
-     //   this.content = content;
    }
 
     @Override
@@ -40,7 +39,7 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DisplayDoorCodeActivity.class);
-                intent.putExtra(DisplayDoorCodeActivity.EXTRA_GATE, content.get(position));
+                intent.putExtra(DisplayDoorCodeActivity.EXTRA_GATE, content.get(holder.getAdapterPosition()));
                 context.startActivity(intent);
             }
         });
