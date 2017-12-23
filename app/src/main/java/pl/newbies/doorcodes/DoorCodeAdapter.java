@@ -15,7 +15,7 @@ import java.util.List;
 public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHolder>
 {
     private Context context;
-    private List<String> content= new ArrayList<>();
+    private List<Gate> content= new ArrayList<>();
 
    public DoorCodeAdapter(Context context)
     {
@@ -35,12 +35,12 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder holder, final int position)
     {
 
-        holder.txtContent.setText(content.get(position));
+        holder.txtContent.setText(content.get(position).getName());
         holder.txtContent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DisplayDoorCodeActivity.class);
-                intent.putExtra(MainActivity.EXTRA_DOOR_ID, holder.getAdapterPosition());
+                intent.putExtra(DisplayDoorCodeActivity.EXTRA_GATE, content.get(position));
                 context.startActivity(intent);
             }
         });
@@ -55,11 +55,7 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
         });
     }
 
-    public void add(int position, String item)
-    {
-        content.add(position, item);
-        notifyItemInserted(position);
-    }
+
 
     public void remove(int position)
     {
@@ -68,7 +64,7 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
     }
 
 
-    public void addData(String content) {
+    public void addData(Gate content) {
         this.content.add(content);
         notifyDataSetChanged();
     }

@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         for (int i = 0; i < gates.size(); i++) {
 
             Log.d(this.getClass().getName(), gates.get(i).name);
-            adapter.addData(gates.get(i).name);
+            adapter.addData(gates.get(i));
         }
     }
 }

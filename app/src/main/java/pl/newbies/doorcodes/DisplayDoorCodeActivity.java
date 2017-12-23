@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class DisplayDoorCodeActivity extends AppCompatActivity
 {
+    public static final String EXTRA_GATE="pl.newbies.doorcodes.GATE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -16,13 +17,13 @@ public class DisplayDoorCodeActivity extends AppCompatActivity
         setContentView(R.layout.activity_display_door_code);
 
         Intent intent = getIntent();
-        int doorId = intent.getIntExtra(MainActivity.EXTRA_DOOR_ID, -1);
+        Gate gate =(Gate) intent.getSerializableExtra(EXTRA_GATE);
 
         TextView textView = (TextView)findViewById(R.id.textView);
-        if(doorId<0)
-            textView.setText(R.string.door_code_error);
+        if(gate==null)
+            textView.setText("error");
         else
-            textView.setText(String.format(getResources().getString(R.string.door_code_msg), doorId));
+            textView.setText(String.format(getResources().getString(R.string.door_code_msg )+" "+ gate.getCode()));
     }
 
 }

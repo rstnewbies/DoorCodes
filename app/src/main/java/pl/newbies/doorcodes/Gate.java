@@ -4,6 +4,7 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,8 +13,8 @@ import java.util.List;
  */
 
 @Entity
-public class Gate {
-
+public class Gate implements Serializable {
+static final long serialVersionUID = 1L;
     @Id
     public Long id;
 
