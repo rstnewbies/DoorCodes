@@ -17,12 +17,14 @@ public class DisplayDoorCodeActivity extends AppCompatActivity
 
         Intent intent = getIntent();
         Gate gate = (Gate) intent.getSerializableExtra(EXTRA_GATE);
-
+        TextView gateView = (TextView)findViewById(R.id.gateView);
         TextView textView = (TextView)findViewById(R.id.textView);
-        if(gate == null)
+        if(gate == null )
             textView.setText(R.string.door_code_error);
-        else
+        else {
             textView.setText(String.format(getResources().getString(R.string.door_code_msg), gate.getCode()));
+           gateView.setText(String.format(getResources().getString(R.string.door_name_msg)+ gate.getName()));
+        }
     }
 
 }
