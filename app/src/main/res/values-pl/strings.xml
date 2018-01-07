@@ -3,6 +3,7 @@
     <string name="app_name">Door Codes</string>
     <string name="title_activity_display_door_code">Wyświetlanie kodu</string>
     <string name="title_activity_add_new_code">Dodaj nowy kod</string>
+    <string name="title_activity_edit_code">Edytuj kod</string>
     <string name="door_code_error">Błąd</string>
 
     <string name="add_code_street">Podaj nazwę ulicy</string>

@@ -46,22 +46,18 @@ public class DoorCodeAdapter extends RecyclerView.Adapter<DoorCodeAdapter.ViewHo
         holder.editButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-//                TODO add activity edit code
-//                Intent intent = new Intent(context, DisplayDoorCodeActivity.class);
-//                intent.putExtra(MainActivity.EXTRA_DOOR_ID, holder.getAdapterPosition());
-//                context.startActivity(intent);
+                Intent intent = new Intent(context, AddNewCodeActivity.class);
+                intent.putExtra(AddNewCodeActivity.EXTRA_GATE, content.get(holder.getAdapterPosition()));
+                context.startActivity(intent);
             }
         });
     }
-
-
 
     public void remove(int position)
     {
         content.remove(position);
         notifyItemRemoved(position);
     }
-
 
     public void addData(Gate content) {
         this.content.add(content);

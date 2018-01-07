@@ -7,13 +7,28 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AddNewCodeActivity extends AppCompatActivity {
-
+public class AddNewCodeActivity extends AppCompatActivity
+{
+    public static final String EXTRA_GATE="pl.newbies.doorcodes.GATE";
+    private long gateId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_code);
+
+        Intent intent = getIntent();
+        Gate gate = (Gate) intent.getSerializableExtra(EXTRA_GATE);
+
+        if(gate != null)
+        {
+            EditText streetEditText = (EditText) findViewById(R.id.streetEditText);
+            EditText codeEditText = (EditText) findViewById(R.id.codeEditText);
+            streetEditText.setText(gate.getName());
+            codeEditText.setText(gate.getCode());
+            setTitle(R.string.title_activity_edit_code);
+            gateId = gate.getId();
+        }
     }
 
     public void onButtonClick(View view) {
@@ -43,11 +58,11 @@ public class AddNewCodeActivity extends AppCompatActivity {
         Gate gate = new Gate();
         gate.name = street;
         gate.code = code;
+        gate.id = gateId;
         gateDao.save(gate);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
     }
-
 
 }
