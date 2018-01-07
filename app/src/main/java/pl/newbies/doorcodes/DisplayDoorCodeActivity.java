@@ -23,7 +23,7 @@ public class DisplayDoorCodeActivity extends AppCompatActivity
             textView.setText(R.string.door_code_error);
         else {
             textView.setText(String.format(getResources().getString(R.string.door_code_msg), gate.getCode()));
-           gateView.setText(String.format(getResources().getString(R.string.door_name_msg)+ gate.getName()));
+           gateView.setText(String.format(getResources().getString(R.string.door_name_msg), gate.getName()));
         }
     }
 

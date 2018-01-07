@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Door Codes</string>
+    <string name="title_activity_display_door_code">Wyświetlanie kodu</string>
+    <string name="title_activity_add_new_code">Dodaj nowy kod</string>
+    <string name="door_code_error">Błąd</string>
+
+    <string name="add_code_street">Podaj nazwę ulicy</string>
+    <string name="add_code_street_hint">nazwa ulicy</string>
+    <string name="add_code_code">Podaj kod</string>
+    <string name="add_code_code_hint">kod</string>
+
+    <string name="button_save">Zapisz</string>
+    <string name="button_back">Wróć</string>
+
+    <string name="door_code_msg">Kod do bramy: %s</string>
+    <string name="door_name_msg">Ulica: %s</string>
+
+    <string name="nav_add">Dodaj nowy kod</string>
+    <string name="nav_delete">Usuń kod</string>
+    <string name="nav_other">Ustawienia</string>
+    <string name="nav_settings">Ustawienia</string>
+
+    <string name="action_settings">Ustawienia</string>
+</resources>
