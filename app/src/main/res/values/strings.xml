@@ -8,6 +8,8 @@
     <string name="add_code_street_hint">street name</string>
     <string name="add_code_code">Enter door code</string>
     <string name="add_code_code_hint">door code</string>
+    <string name="field_street_empty_msg">Street name cannot be empty</string>
+    <string name="field_code_empty_msg">Door code cannot be empty</string>
 
     <string name="button_save">Save</string>
     <string name="button_back">Back</string>

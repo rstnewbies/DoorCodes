@@ -9,6 +9,8 @@
     <string name="add_code_street_hint">nazwa ulicy</string>
     <string name="add_code_code">Podaj kod</string>
     <string name="add_code_code_hint">kod</string>
+    <string name="field_street_empty_msg">Nazwa ulicy nie może być pusta</string>
+    <string name="field_code_empty_msg">Kod nie może być pusty</string>
 
     <string name="button_save">Zapisz</string>
     <string name="button_back">Wróć</string>
