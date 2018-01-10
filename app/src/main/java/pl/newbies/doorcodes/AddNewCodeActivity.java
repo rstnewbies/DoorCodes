@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class AddNewCodeActivity extends AppCompatActivity
 {
     public static final String EXTRA_GATE="pl.newbies.doorcodes.GATE";
-    private long gateId;
+    private Long gateId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
