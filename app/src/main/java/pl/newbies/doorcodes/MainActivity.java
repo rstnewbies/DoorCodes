@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         reloadNRead();
         initNavigationDrawer();
     }
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+        reloadNRead();
+    }
 
 //NAVIGATION DRAWER
 

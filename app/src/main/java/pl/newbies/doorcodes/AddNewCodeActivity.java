@@ -60,8 +60,7 @@ public class AddNewCodeActivity extends AppCompatActivity
         gate.code = code;
         gate.id = gateId;
         gateDao.save(gate);
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        finish();
 
     }
 
