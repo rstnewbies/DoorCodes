@@ -11,9 +11,12 @@
     <string name="add_code_code_hint">door code</string>
     <string name="field_street_empty_msg">Street name cannot be empty</string>
     <string name="field_code_empty_msg">Door code cannot be empty</string>
+    <string name="delete_problem_null">Something works wrong :(</string>
+    <string name="delete_success">Success</string>
 
     <string name="button_save">Save</string>
     <string name="button_back">Back</string>
+    <string name="button_delete">Delete</string>
 
     <string name="door_code_msg">Code for gate: %s</string>
     <string name="door_name_msg">Street: %s</string>

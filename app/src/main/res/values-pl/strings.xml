@@ -12,9 +12,12 @@
     <string name="add_code_code_hint">kod</string>
     <string name="field_street_empty_msg">Nazwa ulicy nie może być pusta</string>
     <string name="field_code_empty_msg">Kod nie może być pusty</string>
+    <string name="delete_problem_null">Coś się zepsuło :(</string>
+    <string name="delete_success">Sukces</string>
 
     <string name="button_save">Zapisz</string>
     <string name="button_back">Wróć</string>
+    <string name="button_delete">Usuń</string>
 
     <string name="door_code_msg">Kod do bramy: %s</string>
     <string name="door_name_msg">Ulica: %s</string>
